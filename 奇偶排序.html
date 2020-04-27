@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function oddEvenSort(arr) {
+                let sorted = arr.sort();
+                let result = [];
+                let odd = 1;
+                let even = 0;
+                sorted.each(item => {
+                    if (item % 2 === 1) {
+                        result[odd] = item;
+                        odd += 2;
+                    } else if (item % 2 === 0) {
+                        result[even] = item;
+                        even += 2;
+                    }
+                });
+                return result;
+            }
+
+            let arr = [4, 2, 5, 7];
+            oddEvenSort(arr);
+        </script>
+    </body>
+</html>
